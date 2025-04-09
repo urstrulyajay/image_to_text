@@ -14,6 +14,7 @@ Note : All the flows are shown in /images folder
 
 ## Data 
 - https://huggingface.co/datasets/openfoodfacts/product-database
+- Download the csv file and place it in datafolder and run the Notebook in notebook folder to get train, validation and test datasets
 
 ## 🍽️ Dataset Description
 - Open Food Facts is a database of food products with ingredients, allergens, nutrition facts 
