@@ -1,0 +1,7 @@
+torch
+unsloth
+Pillow
+requests
+transformers
+trl
+torchvision

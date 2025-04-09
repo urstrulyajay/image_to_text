@@ -1,0 +1,48 @@
+{
+  "model_name": "unsloth/Qwen2-VL-7B-Instruct",
+  "load_in_4bit": true,
+  "use_gradient_checkpointing": "unsloth",
+
+  "finetune_vision_layers": true,
+  "finetune_language_layers": true,
+  "finetune_attention_modules": true,
+  "finetune_mlp_modules": true,
+
+  "r": 16,
+  "lora_alpha": 16,
+  "lora_dropout": 0,
+  "bias": "none",
+  "random_state": 3407,
+  "use_rslora": false,
+  "loftq_config": null,
+
+  "dataset_path": "sub_train.json",
+  "image_size": 224,
+  "batch_size": 4,
+  "instruction": "Extract the nutrition content from the image provided. The output should be a json format.",
+
+  "train_batch_size": 2,
+  "gradient_accumulation_steps": 4,
+  "warmup_steps": 5,
+  "max_steps": 30,
+  "learning_rate": 0.0002,
+  "logging_steps": 1,
+  "optim": "adamw_8bit",
+  "weight_decay": 0.01,
+  "lr_scheduler_type": "linear",
+  "seed": 3407,
+  "output_dir": "outputs",
+  "report_to": "none",
+
+  "remove_unused_columns": false,
+  "dataset_text_field": "",
+  "dataset_kwargs": {
+    "skip_prepare_dataset": true
+  },
+  "dataset_num_proc": 4,
+  "max_seq_length": 2048,
+  "save_dir": "lora_model",
+  "FastVisionModel": {
+    "for_training": true
+  }
+}
